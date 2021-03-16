@@ -1,0 +1,254 @@
+
+*, *:focus, *:hover {
+  outline: none;
+}
+
+
+
+
+
+
+
+
+body{
+  background-color: #282c34;
+  font-family: 'helvetica neue';
+}
+
+.player-shadow{
+  width: 400px;
+  border-radius: 10px;
+  height: 178px;
+  margin: 10px;
+  background-color: #A6D9FF;
+}
+
+.player-bg{
+  width: inherit;
+  height: 170px;
+  border-radius: 10px;
+  background-color: white;
+  text-align: left;
+}
+
+
+.player-main{
+  width: inherit;
+  height: 120px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #408DD3;
+}
+
+.player-text{
+  width: 300px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; 
+}
+
+
+.genre p{
+  all: unset;
+  color: white;
+  font-size: 14px;
+}
+
+.genre{
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.player{
+  width: inherit;
+  height: 80px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#waveform{
+width: 220px;
+}
+
+.controls button, .controls{
+  all:unset;
+  margin: 10px;
+  cursor: pointer;
+
+}
+
+.download-btn{
+  background-color: #296C96;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+}
+
+.fas{
+color: white;
+}
+
+.player-bg h3,p{
+  all:unset;
+}
+
+.player-bg h3{
+  font-weight: bold;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+.player-bg h3.grey-text{
+  color: #5e5e5e;
+}
+
+
+
+.player-info{
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.audio-page{
+  max-width: 1000px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fa-heart{
+  font-size: 24px;
+}
+
+.heart-black{
+  color: #4b4b4b;
+}
+
+.heart-red{
+  color: #f7305b;
+}
+
+.search-module{
+  width: 400px;
+  margin: auto;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-bar{
+  padding-left: 10px;
+  border: none;
+  width: 200px;
+  height: inherit;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.genre-select select{
+  height: 27px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-left: 1px solid grey;
+}
+
+
+.submit-btn{
+  width: 100px;
+  outline: 0;
+  border: 0;
+  border-radius: 0px 10px 10px 0px;
+  height: 27px;
+  color: white;
+  box-shadow: 0px 5px 10px #234d74;
+  background-color: #408DD3;
+  z-index: -1;
+
+}
+
+
+nav{
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+nav a{
+  height: inherit;
+}
+nav a img{
+  height: inherit;
+}
+
+nav h1{
+  all: unset;
+  font-size: 40px;
+}
+
+.nav-btns{
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-btns * {
+  margin-right: 15px;
+}
+
+.signup-form, .upload-form{
+  color: white;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+}
+.purple-btn{
+  color: white;
+  background: linear-gradient(to bottom right,rgb(15, 156, 238), rgb(255, 0, 242)) !important;
+  box-shadow: 0px 5px 15px rgb(53, 3, 50);
+  transition: all .1s ease-in-out;
+}
+
+.purple-btn:hover{
+  transform: translateY(-3px);
+  box-shadow: 0px 7px 20px rgb(53, 3, 50);
+
+}
+
+.signup-form input,.upload-form input, select{
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  margin: 10px 0px 10px 0px;
+  padding: 10px;
+}
+
+.upload-form option{
+  padding: 10px;
+  margin: 10px;
+}
+
+ input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
