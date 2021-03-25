@@ -67,7 +67,7 @@ function App() {
         </Switch>
         {isNewUser &&
           <>
-            <Redirect to='/sign-up' />
+            <Redirect to='/LoopNation/#/sign-up' />
           </>
         }
       </Router>

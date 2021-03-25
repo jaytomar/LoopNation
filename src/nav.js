@@ -4,7 +4,6 @@ import firebaseInstance, {authService} from './fbase'
 import {BrowserRouter as Router, Link} from "react-router-dom"
 
 export default function Nav({isLoggedIn, profileInfo, setIsNewUser}) {
-  console.log(isLoggedIn);
     const handleLogin = () => {
         var provider = new firebaseInstance.auth.GoogleAuthProvider();
         authService.signInWithPopup(provider)
@@ -27,11 +26,11 @@ export default function Nav({isLoggedIn, profileInfo, setIsNewUser}) {
 
   return (
       <nav>
-        <a href="/">
+        <a href="/LoopNation/#/">
           <img src={process.env.PUBLIC_URL + "/loopnation logo-01.png"} alt=""/>
         </a>
         <div className="nav-btns">
-        <a href="/LoopNation/upload">upload</a>
+        <a href="/LoopNation/#/upload">upload</a>
         {profileInfo &&
             <ProfileButton profileInfo={profileInfo}/>
         }
