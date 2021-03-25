@@ -167,7 +167,7 @@ const Profile = ({ profileInfo, userObj }) => {
                         />
                       </label>
                       <img
-                        src={profileData.picture || "/generic-dp.png"}
+                        src={profileData.picture || process.env.PUBLIC_URL +"/generic-dp.png"}
                         alt=""
                         className="img-hover"
                       />
@@ -177,7 +177,7 @@ const Profile = ({ profileInfo, userObj }) => {
                   <>
                     <div className="image-container">
                       <img
-                        src={profileData.picture || "/generic-dp.png"}
+                        src={profileData.picture || process.env.PUBLIC_URL +"/generic-dp.png"}
                         alt=""
                         className="img-hover"
                       />
@@ -209,13 +209,13 @@ const Profile = ({ profileInfo, userObj }) => {
                       <button onClick={onEditProfile}></button>
                     </label>
                   </div>
-                  <img className="img-hover" src={profileData.cover} />
+                  <img className="img-hover" src={profileData.cover || process.env.PUBLIC_URL +"/loopnation-cover.png"} />
                 </div>
               ) : (
                 <div className="cover-container">
                   <img
                     className="img-hover"
-                    src={profileData.cover||"/loopnation-cover.png"}
+                    src={profileData.cover||process.env.PUBLIC_URL +"/loopnation-cover.png"}
                   />
                 </div>
               )}
