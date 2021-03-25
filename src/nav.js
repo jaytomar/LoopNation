@@ -4,7 +4,7 @@ import firebaseInstance, {authService} from './fbase'
 import {BrowserRouter as Router, Link} from "react-router-dom"
 
 export default function Nav({isLoggedIn, profileInfo, setIsNewUser}) {
-
+  console.log(isLoggedIn);
     const handleLogin = () => {
         var provider = new firebaseInstance.auth.GoogleAuthProvider();
         authService.signInWithPopup(provider)
@@ -15,12 +15,7 @@ export default function Nav({isLoggedIn, profileInfo, setIsNewUser}) {
           else{
             setIsNewUser(false)
           }
-        }).catch((error) => {
-          var errorCode = error.code;
-          var errorMessage = error.message;
-          var email = error.email;
-          var credential = error.credential;
-        });
+        })
       
     }
 
@@ -37,15 +32,15 @@ export default function Nav({isLoggedIn, profileInfo, setIsNewUser}) {
         </a>
         <div className="nav-btns">
         <a href="/upload">upload</a>
-        {profileInfo ?
+        {profileInfo &&
             <ProfileButton profileInfo={profileInfo}/>
+        }
+        {isLoggedIn ?
+            <button className="sign-in-btn" onClick={onLogOut}>logout</button>
             :
-            <button onClick={handleLogin}>login</button>
+            <button className="sign-in-btn" onClick={handleLogin}>login</button>
         }
-        {isLoggedIn &&
 
-        <button onClick={onLogOut}>logout</button>
-        }
         </div>
       </nav>
   );

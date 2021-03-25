@@ -3,7 +3,7 @@ import "./App.css";
 export default function ProfileButton( {profileInfo}) {
       return (
       <>
-        <a href="/profile">{profileInfo.username}</a>  
+        <a href={"/"+profileInfo.username} className="purple-btn">{profileInfo.username}</a>  
       </>
   );
 }

@@ -1,9 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./App.css";
 import { dbService } from "./fbase";
 import {
-  BrowserRouter as Router,
-  Redirect,
   useHistory,
 } from "react-router-dom";
 
@@ -20,9 +18,9 @@ function SignUp({ userObj, setIsNewUser, setProfileInfo }) {
   };
   const handleUsername = (e) => {
     e.preventDefault();
-
     setUsername(e.target.value);
   };
+
   const handleBio = (e) => {
     e.preventDefault();
     setBio(e.target.value);
@@ -33,6 +31,7 @@ function SignUp({ userObj, setIsNewUser, setProfileInfo }) {
       username: username,
       displayName: displayName,
       bio: bio,
+      id:userObj.user.uid
     };
     e.preventDefault();
     const docRef = dbService.collection("users").doc(userObj.user.uid);
@@ -66,7 +65,7 @@ function SignUp({ userObj, setIsNewUser, setProfileInfo }) {
         <p>{"www." + window.location.hostname + ".com/" + username}</p>
         <br />
         <label htmlFor="">Bio</label>
-        <input type="text" onChange={handleBio} value={bio} />
+        <input type="text" onChange={handleBio} value={bio}  maxlength="150"/>
         <br />
         <input
           type="submit"

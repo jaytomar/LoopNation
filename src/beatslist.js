@@ -1,41 +1,49 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
+import { dbService } from "./fbase";
 import './App.css';
 import AudioPlayer from './audioPlayer'
 
-const data = [
-    {
-        url:'kaira.mp3',
-        name: "Travis Scott Type Beat Hehe",
-        author: "BeatCook",
-    },
-    {
-        url:'garnules2.wav',
-        name: "Flume ka chautha beta",
-        author: "paani m aag",
-    },
-]
 
-function BeatsList( {results} ) {
-    // const[songData,setSongData]=useState(data)
 
-    // const handleAdd = () => {
-    //     setSongData([...songData,
-    //         {
-    //             url:'garnules2.wav',
-    //             name: "mere baare",
-    //             author: "teesriduni7a",
-    //         }
-    //     ])
-    // }
+function BeatsList( {results, setResults, profileInfo} ) {
+    
+    
+    const [likesArray, setLikesArray] = useState([]);
+    
+    useEffect(()=>{
+        console.log("useEffect");
+        console.log(profileInfo);
+        if(profileInfo){
 
+            var likesRef = dbService.collection("likes").doc(profileInfo.username);
+            
+            likesRef.get().then((snapshot) => {
+                if (snapshot.exists) {
+                    setLikesArray(snapshot.data().likes);
+                }
+            });
+        }
+        },[])
+        console.log(results);
     const player = results.map((item,index)=>{
         return(
             <AudioPlayer 
+            id={item.id}
             key={index}
+            index={index}
             url={item.url} 
             name={item.name}
             author={item.author}
             genre={item.genre}
+            audioKey={item.key}
+            bpm = {item.bpm}
+            likes={item.likes}
+            audioData={results}
+            setAudioData={setResults}
+            profileInfo={profileInfo}
+            likesArray = {likesArray}
+            setLikesArray = {setLikesArray}
+            liked = {likesArray.includes(item.id)}
             />
         )
     })

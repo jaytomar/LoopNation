@@ -6,7 +6,7 @@ import Search from "./searchcomponent"
 import {authService, dbService} from "./fbase"
 
 
-export default function SearchPage( {userObj}) {
+export default function SearchPage( {userObj, profileInfo}) {
   const[results,setResults] = useState([])
 
   useEffect(()=>{
@@ -15,34 +15,37 @@ export default function SearchPage( {userObj}) {
     .then((snapshot)=>{
       snapshot.forEach((audioDoc)=>{
         const authorID=audioDoc.data().authorID
-        console.log()
-        let author = ''
-        dbService.collection("users").doc(authorID).get().then((userDoc)=>{
-          author = userDoc.data().username
+        dbService
+        .collection("users")
+        .doc(authorID)
+        .get()
+        .then((userDoc)=>{
+          let author = userDoc.data().username
           const finalData={
+            id : audioDoc.data().id,
             genre : audioDoc.data().genre,
             name : audioDoc.data().name,
             author : author,
             likes : audioDoc.data().likes,
-            url : audioDoc.data().url
+            url : audioDoc.data().url,
+            key : audioDoc.data().key,
+            scale : audioDoc.data().scale,
+            bpm : audioDoc.data().bpm,
             }
           data = ([...data,finalData])
           setResults(data)
-
-         })
-         
-
+         });
       })
-      console.log(data);
     })
   },[])
 
+  
   return (
     <div className="App">
-      <Search />
+      <Search setResults={setResults}/>
       <br/><br/>
 
-      <BeatsList results={results}/>
+      <BeatsList results={results} setResults={setResults} profileInfo={profileInfo}/>
     </div>
   );
 }
