@@ -8,7 +8,7 @@ import AudioPage from "./audiopage"
 import Profile from "./profile"
 import {authService, dbService} from "./fbase"
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Redirect

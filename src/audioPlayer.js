@@ -181,12 +181,12 @@ export default function AudioPlayer({
                 <h3>{bpm + " BPM"}</h3>
               </div>
               <div className="title-author">
-                <a href={"/" + author + "/" + id}>
+                <a href={"/LoopNation/" + author + "/" + id}>
                   <h3>{name}</h3>
                 </a>
                 <h3 className="grey-text">
                   by&nbsp;
-                  <a href={"/" + author}>{author}</a>
+                  <a href={"/LoopNation/" + author}>{author}</a>
                 </h3>
               </div>
             </div>

@@ -31,7 +31,7 @@ export default function Nav({isLoggedIn, profileInfo, setIsNewUser}) {
           <img src={process.env.PUBLIC_URL + "/loopnation logo-01.png"} alt=""/>
         </a>
         <div className="nav-btns">
-        <a href="/upload">upload</a>
+        <a href="/LoopNation/upload">upload</a>
         {profileInfo &&
             <ProfileButton profileInfo={profileInfo}/>
         }
