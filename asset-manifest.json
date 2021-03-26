@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/LoopNation/static/css/main.0680b94d.chunk.css",
-    "main.js": "/LoopNation/static/js/main.66bb198a.chunk.js",
-    "main.js.map": "/LoopNation/static/js/main.66bb198a.chunk.js.map",
+    "main.js": "/LoopNation/static/js/main.a7cac801.chunk.js",
+    "main.js.map": "/LoopNation/static/js/main.a7cac801.chunk.js.map",
     "runtime-main.js": "/LoopNation/static/js/runtime-main.1609d3a1.js",
     "runtime-main.js.map": "/LoopNation/static/js/runtime-main.1609d3a1.js.map",
     "static/js/2.98283e3d.chunk.js": "/LoopNation/static/js/2.98283e3d.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.1609d3a1.js",
     "static/js/2.98283e3d.chunk.js",
     "static/css/main.0680b94d.chunk.css",
-    "static/js/main.66bb198a.chunk.js"
+    "static/js/main.a7cac801.chunk.js"
   ]
 }
