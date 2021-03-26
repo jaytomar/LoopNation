@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/LoopNation/static/css/main.9d417c50.chunk.css",
-    "main.js": "/LoopNation/static/js/main.25072dc2.chunk.js",
-    "main.js.map": "/LoopNation/static/js/main.25072dc2.chunk.js.map",
+    "main.css": "/LoopNation/static/css/main.0680b94d.chunk.css",
+    "main.js": "/LoopNation/static/js/main.57eb71f1.chunk.js",
+    "main.js.map": "/LoopNation/static/js/main.57eb71f1.chunk.js.map",
     "runtime-main.js": "/LoopNation/static/js/runtime-main.1609d3a1.js",
     "runtime-main.js.map": "/LoopNation/static/js/runtime-main.1609d3a1.js.map",
-    "static/js/2.d4ca2719.chunk.js": "/LoopNation/static/js/2.d4ca2719.chunk.js",
-    "static/js/2.d4ca2719.chunk.js.map": "/LoopNation/static/js/2.d4ca2719.chunk.js.map",
+    "static/js/2.839d301b.chunk.js": "/LoopNation/static/js/2.839d301b.chunk.js",
+    "static/js/2.839d301b.chunk.js.map": "/LoopNation/static/js/2.839d301b.chunk.js.map",
     "static/js/3.7b4c5e6a.chunk.js": "/LoopNation/static/js/3.7b4c5e6a.chunk.js",
     "static/js/3.7b4c5e6a.chunk.js.map": "/LoopNation/static/js/3.7b4c5e6a.chunk.js.map",
     "index.html": "/LoopNation/index.html",
-    "static/css/main.9d417c50.chunk.css.map": "/LoopNation/static/css/main.9d417c50.chunk.css.map",
-    "static/js/2.d4ca2719.chunk.js.LICENSE.txt": "/LoopNation/static/js/2.d4ca2719.chunk.js.LICENSE.txt"
+    "static/css/main.0680b94d.chunk.css.map": "/LoopNation/static/css/main.0680b94d.chunk.css.map",
+    "static/js/2.839d301b.chunk.js.LICENSE.txt": "/LoopNation/static/js/2.839d301b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1609d3a1.js",
-    "static/js/2.d4ca2719.chunk.js",
-    "static/css/main.9d417c50.chunk.css",
-    "static/js/main.25072dc2.chunk.js"
+    "static/js/2.839d301b.chunk.js",
+    "static/css/main.0680b94d.chunk.css",
+    "static/js/main.57eb71f1.chunk.js"
   ]
 }
