@@ -38,7 +38,7 @@ export default function AudioPlayer({
   const wavesurfer = useRef(null);
   const heartref = useRef(null);
   const [playing, setPlay] = useState(false);
-  const [volume, setVolume] = useState(1);
+  const [volume, setVolume] = useState(.8);
   const [duration, setDuration] = useState();
   const [currentTime, setCurrentTime] = useState();
   const [liked, setLiked] = useState(false);
@@ -181,12 +181,13 @@ export default function AudioPlayer({
                 <h3>{bpm + " BPM"}</h3>
               </div>
               <div className="title-author">
-                <a href={"/LoopNation/#/" + author + "/" + id}>
+                
+                <a href={`${process.env.PUBLIC_URL}/${author}/${id}`}>
                   <h3>{name}</h3>
                 </a>
                 <h3 className="grey-text">
                   by&nbsp;
-                  <a href={"/LoopNation/#/" + author}>{author}</a>
+                  <a href={`${process.env.PUBLIC_URL}/${author}`}>{author}</a>
                 </h3>
               </div>
             </div>

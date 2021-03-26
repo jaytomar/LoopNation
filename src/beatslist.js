@@ -11,8 +11,7 @@ function BeatsList( {results, setResults, profileInfo} ) {
     const [likesArray, setLikesArray] = useState([]);
     
     useEffect(()=>{
-        console.log("useEffect");
-        console.log(profileInfo);
+        
         if(profileInfo){
 
             var likesRef = dbService.collection("likes").doc(profileInfo.username);
@@ -24,7 +23,7 @@ function BeatsList( {results, setResults, profileInfo} ) {
             });
         }
         },[])
-        console.log(results);
+        
     const player = results.map((item,index)=>{
         return(
             <AudioPlayer 

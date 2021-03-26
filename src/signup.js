@@ -62,7 +62,7 @@ function SignUp({ userObj, setIsNewUser, setProfileInfo }) {
         <label htmlFor="">Username</label>
         <input type="text" onChange={handleUsername} value={username} />
         <br />
-        <p>{"www." + window.location.hostname + ".com//LoopNation/#/" + username}</p>
+        <p>{`www.${window.location.hostname}.com${process.env.PUBLIC_URL}/${username}`}</p>
         <br />
         <label htmlFor="">Bio</label>
         <input type="text" onChange={handleBio} value={bio}  maxlength="150"/>

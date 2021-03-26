@@ -331,6 +331,7 @@ label input[type="file"], label button{
 
 .sign-in-btn{
   background-color: #f7307c;
+  cursor: pointer;
 }
 
 .header{

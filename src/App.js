@@ -8,7 +8,7 @@ import AudioPage from "./audiopage"
 import Profile from "./profile"
 import {authService, dbService} from "./fbase"
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route,
   Redirect
@@ -22,6 +22,7 @@ function App() {
   const[init, setInit] = useState(false)
 
   useEffect(()=>{
+    setInit(false)
     authService.onAuthStateChanged((user)=>{
       if(user){
         setUserObj({user})
@@ -43,11 +44,11 @@ function App() {
 
   return (
     <div className="App">
-      <Nav isLoggedIn={isLoggedIn} profileInfo={profileInfo} setIsNewUser={setIsNewUser}/>
+      <Nav isLoggedIn={isLoggedIn} profileInfo={profileInfo} setIsNewUser={setIsNewUser} setProfileInfo={setProfileInfo}/>
       <br/><br/>
       {init &&
 
-        <Router>
+        <Router basename={"/LoopNation"}>
         <Switch>
           <Route exact path="/">
             <SearchPage profileInfo={profileInfo}/>
